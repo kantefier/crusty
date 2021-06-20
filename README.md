@@ -13,7 +13,7 @@ And well, it's just fun to write some useful stuff using some tech I don't reall
 - [x] Reads the first command line argument as a path to the config file
 - [x] Has a defined Config structure
 - [x] Parses TOML config file to a structure
-- [ ] Enable ENV overriding some config settings (would be handy for passwords)
+- [x] Enable ENV overriding some config settings (would be handy for passwords)
 - [ ] Connect to MongoDB
 - [ ] Use WE proto-files, create client stubs
 - [ ] Establishes a gRPC connection to the node
