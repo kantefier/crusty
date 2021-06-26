@@ -26,7 +26,7 @@ impl Settings {
         let mut s = Config::default();
 
         // Read application's default config
-        s.merge(File::with_name("config/default.toml"))?;
+        s.merge(File::with_name(DEFAULT_CONFIG_PATH))?;
 
         // Read user provided config file
         s.merge(File::with_name(config_path))?;
@@ -39,3 +39,5 @@ impl Settings {
         s.try_into()
     }
 }
+
+const DEFAULT_CONFIG_PATH: &str = "config/default.toml";
