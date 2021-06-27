@@ -3,6 +3,12 @@ use std::env;
 mod settings;
 use settings::Settings;
 
+pub mod wavesenterprise {
+    tonic::include_proto!("wavesenterprise");
+}
+#[allow(unused_imports)] //TODO: remove this later please
+use wavesenterprise::blockchain_events_service_client;
+
 fn main() {
     println!("Crusty starting...");
     let config_path = env::args()

@@ -10,7 +10,9 @@ edition = "2018"
 toml = "0.5.8"
 serde = { version = "1.0", features = ["derive"] }
 config = "0.11"
+tonic = "0.4"
+prost = "0.7"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
 
 [build-dependencies]
-protobuf-codegen-pure = "2.3"
-glob = "0.3"
+tonic-build = "0.4"
