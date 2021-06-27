@@ -8,6 +8,11 @@ That gives the opportunities to implement services that would subscribe to these
 
 And well, it's just fun to write some useful stuff using some tech I don't really know yet. What a great challenge to learn, isn't it?
 
+### Tips and tricks
+
+If you're using Intellij Rust plugin and have trouble with code completion with `include_proto!`,
+try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.build.scripts`. Worked for me! 
+
 ### TODOs:
 - [x] "Hello world!" compiles and runs (yay!)
 - [x] Reads the first command line argument as a path to the config file
