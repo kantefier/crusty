@@ -14,8 +14,8 @@ And well, it's just fun to write some useful stuff using some tech I don't reall
 - [x] Has a defined Config structure
 - [x] Parses TOML config file to a structure
 - [x] Enable ENV overriding some config settings (would be handy for passwords)
+- [x] Build Rust sources from WE proto-files
 - [ ] Connect to MongoDB
-- [ ] Use WE proto-files, create client stubs
 - [ ] Establishes a gRPC connection to the node
 - [ ] Subscribe to Blockchain Events stream
 - [ ] Decide on MongoDB structure
