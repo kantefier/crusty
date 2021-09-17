@@ -20,12 +20,15 @@ try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.
 - [x] Parses TOML config file to a structure
 - [x] Enable ENV overriding some config settings (would be handy for passwords)
 - [x] Build Rust sources from WE proto-files
-- [ ] Connect to MongoDB
+- [x] Connect to MongoDB
 - [ ] Establishes a gRPC connection to the node
 - [ ] Subscribe to Blockchain Events stream
 - [ ] Decide on MongoDB structure
 - [ ] ...
 - [ ] Pack it all up in a docker image
+- [ ] ...
+- [ ] Implement tests
+- [ ] Create a CI pipeline to launch tests automatically
 - [ ] ...
 - [ ] Support REST API
 - [ ] ...
