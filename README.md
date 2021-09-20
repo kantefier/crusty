@@ -11,7 +11,11 @@ And well, it's just fun to write some useful stuff using some tech I don't reall
 ### Tips and tricks
 
 If you're using Intellij Rust plugin and have trouble with code completion with `include_proto!`,
-try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.build.scripts`. Worked for me! 
+try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.build.scripts`. Worked for me!
+
+### How to launch
+
+    RUST_LOG=crusty=trace cargo run config/local.conf
 
 ### TODOs:
 - [x] "Hello world!" compiles and runs (yay!)
@@ -23,6 +27,7 @@ try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.
 - [x] Connect to MongoDB
 - [x] Establishes a gRPC connection to the node
 - [x] Subscribe to Blockchain Events stream
+- [x] Introduce logging
 - [ ] Decide on MongoDB structure
 - [ ] ...
 - [ ] Pack it all up in a docker image
