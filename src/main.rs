@@ -8,7 +8,6 @@ pub mod we {
     tonic::include_proto!("wavesenterprise");
 }
 
-#[allow(unused_imports)] //TODO: remove this later please
 use we::blockchain_events_service_client as bc_client;
 
 #[tokio::main]

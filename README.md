@@ -21,8 +21,8 @@ try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.
 - [x] Enable ENV overriding some config settings (would be handy for passwords)
 - [x] Build Rust sources from WE proto-files
 - [x] Connect to MongoDB
-- [ ] Establishes a gRPC connection to the node
-- [ ] Subscribe to Blockchain Events stream
+- [x] Establishes a gRPC connection to the node
+- [x] Subscribe to Blockchain Events stream
 - [ ] Decide on MongoDB structure
 - [ ] ...
 - [ ] Pack it all up in a docker image
