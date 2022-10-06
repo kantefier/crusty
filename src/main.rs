@@ -3,6 +3,7 @@ use std::env;
 mod settings;
 use settings::Settings;
 use flexi_logger::Logger;
+use arangors::Connection;
 
 pub mod we {
     tonic::include_proto!("wavesenterprise");
@@ -26,7 +27,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     log::debug!("Settings: {:#?}", setting);
 
-    let node_endpoint = format!("http://{host}:{port}", host = setting.node.ip, port = setting.node.port);
+    let arango_url = format!("{host}:{port}", host = setting.arango.host, port = setting.arango.port);
+    // Connect to ArangoDB
+    let _conn = Connection::establish_basic_auth(
+        arango_url.as_str(),
+        setting.arango.user.as_str(),
+        setting.arango.password.as_str())
+        .await
+        .unwrap();
+    log::info!("Connected to ArangoDB at '{}'", arango_url);
+
+    let node_endpoint = format!("{host}:{port}", host = setting.node.ip, port = setting.node.port);
     log::trace!("Node endpoint: '{}'", node_endpoint);
     log::info!("Connecting to node...");
 

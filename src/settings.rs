@@ -4,7 +4,7 @@ use config::{ConfigError, Config, File, Environment};
 #[derive(Deserialize, Debug)]
 pub struct Settings {
     pub node: NodeCfg,
-    pub mongo: MongoCfg,
+    pub arango: ArangoCfg,
 }
 
 #[derive(Deserialize, Debug)]
@@ -14,9 +14,9 @@ pub struct NodeCfg {
 }
 
 #[derive(Deserialize, Debug)]
-pub struct MongoCfg {
-    pub ip: String,
-    pub port: Option<u16>,
+pub struct ArangoCfg {
+    pub host: String,
+    pub port: u16,
     pub user: String,
     pub password: String,
 }

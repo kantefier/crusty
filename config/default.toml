@@ -1,9 +1,9 @@
 [node]
-ip = "10.0.0.1"
+ip = "http://10.0.0.1"
 port = 6865
 
-[mongo]
-ip = "127.0.0.1"
-port = 27017
-user = "mongouser"
+[arango]
+host = "http://127.0.0.1"
+port = 8529
+user = "root"
 password = "better-kept-secret"

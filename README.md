@@ -16,7 +16,7 @@ try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.
 
 ### How to launch
 
-    RUST_LOG=crusty=trace cargo run config/local.conf
+    RUST_LOG=crusty=trace cargo run config/local.toml
 
 ### TODOs:
 - [x] "Hello world!" compiles and runs (yay!)
