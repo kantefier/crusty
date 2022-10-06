@@ -2,7 +2,6 @@ use std::env;
 
 mod settings;
 use settings::Settings;
-use mongodb::{Client, options::ClientOptions, options::Credential, options::ServerAddress, bson::doc};
 use flexi_logger::Logger;
 
 pub mod we {
@@ -26,28 +25,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let setting = Settings::new(config_path.as_str()).unwrap();
 
     log::debug!("Settings: {:#?}", setting);
-
-    let mongo_client_options = ClientOptions::builder()
-        .app_name("Crusty".to_string())
-        .hosts(vec![ServerAddress::Tcp {
-            host: setting.mongo.ip,
-            port: setting.mongo.port,
-        }])
-        .credential(Credential::builder()
-            .username(setting.mongo.user)
-            .password(setting.mongo.password)
-            .build())
-        .build();
-
-    log::info!("Connecting to MongoDB...");
-    let mongo_client = Client::with_options(mongo_client_options)?;
-
-    // Ping the server to see if you can connect to the cluster
-    mongo_client
-        .database("admin")
-        .run_command(doc! {"ping": 1}, None)
-        .await?;
-    log::info!("MongoDB connected");
 
     let node_endpoint = format!("http://{host}:{port}", host = setting.node.ip, port = setting.node.port);
     log::trace!("Node endpoint: '{}'", node_endpoint);
