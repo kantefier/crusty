@@ -10,8 +10,9 @@ And well, it's just fun to write some useful stuff using some tech I don't reall
 
 ### Tips and tricks
 
-If you're using Intellij Rust plugin and have trouble with code completion with `include_proto!`,
+1. If you're using Intellij Rust plugin and have trouble with code completion with `include_proto!`,
 try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.build.scripts`. Worked for me!
+2. Assure that you have `protoc` installed locally. If it is not, [install it](https://grpc.io/docs/protoc-installation/).
 
 ### How to launch
 
@@ -28,7 +29,9 @@ try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.
 - [x] Establishes a gRPC connection to the node
 - [x] Subscribe to Blockchain Events stream
 - [x] Introduce logging
-- [ ] Decide on MongoDB structure
+- [x] Drop MongoDB ideas
+- [ ] Connect to ArangoDB
+- [ ] Test run crawling of first 10 blocks
 - [ ] ...
 - [ ] Pack it all up in a docker image
 - [ ] ...
