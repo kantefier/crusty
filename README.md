@@ -30,9 +30,9 @@ try navigating to `Experimental Features` and enabling `org.rust.cargo.evaluate.
 - [x] Subscribe to Blockchain Events stream
 - [x] Introduce logging
 - [x] Drop MongoDB ideas
-- [ ] Connect to ArangoDB
-- [ ] Test run crawling of first 10 blocks
-- [ ] ...
+- [x] Connect to ArangoDB
+- [ ] Test run crawling of first 10 blocks into ArangoDB
+- [ ] ... decide what to do next ...
 - [ ] Pack it all up in a docker image
 - [ ] ...
 - [ ] Implement tests
